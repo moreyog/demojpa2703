@@ -23,6 +23,7 @@ public class UserController {
 	@PostMapping("/user")
 	public String addUser(@RequestBody User user) {
 		if(user != null) {
+			//This should be called from service layer
 			userRepository.save(user);
 			return "success";
 		} else {
